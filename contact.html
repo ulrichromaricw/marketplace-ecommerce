@@ -1,0 +1,59 @@
+<!-- contact.html — Responsable : Membre 1 -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Marketplace</title>
+  <meta name="description" content="Une question sur une commande ou sur l'ouverture d'une boutique ? Écrivez-nous.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <header class="en-tete">
+    <a href="index.html" class="logo">Marketplace</a>
+    <button class="menu-burger" aria-label="Ouvrir le menu">☰</button>
+    <nav class="nav-principale">
+      <a href="catalogue.html">Catalogue</a>
+      <a href="boutiques.html">Boutiques</a>
+      <span id="zone-compte"></span>
+      <a href="panier.html">Panier (<span id="compteur-panier">0</span>)</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Nous contacter</h1>
+    <p>Une question sur une commande, un vendeur ou l'ouverture de votre boutique ? Écrivez-nous, l'équipe vous répond.</p>
+    <form id="form-contact" novalidate style="max-width: 560px;">
+      <label for="contact-nom">Nom
+        <input id="contact-nom" name="nom" autocomplete="name">
+      </label>
+      <label for="contact-email">E-mail
+        <input id="contact-email" name="email" type="email" autocomplete="email">
+      </label>
+      <label for="contact-sujet">Sujet
+        <select id="contact-sujet" name="sujet">
+          <option>Une commande</option>
+          <option>Ouvrir ou gérer ma boutique</option>
+          <option>Autre question</option>
+        </select>
+      </label>
+      <label for="contact-message">Message
+        <textarea id="contact-message" name="message" rows="5"></textarea>
+      </label>
+      <div id="erreurs-contact" class="erreur"></div>
+      <button class="bouton" type="submit">Envoyer</button>
+    </form>
+  </main>
+
+  <footer class="pied-de-page">
+    <p>© 2026 Marketplace — projet scolaire, Institut Saint Jean — <a href="contact.html">Contact</a></p>
+  </footer>
+
+  <script src="js/storage.js"></script>
+  <script src="js/main.js"></script>
+  <script>demarrerPage(initContact);</script>
+</body>
+</html>
