@@ -20,7 +20,7 @@ main { max-width: 1200px; margin: 0 auto; padding: calc(var(--espace) * 3); }
 .en-tete { display: flex; align-items: center; justify-content: space-between; padding: calc(var(--espace) * 2); background: var(--couleur-principale); }
 .en-tete a { color: white; text-decoration: none; margin-left: calc(var(--espace) * 2); }
 
-.bouton { background: var(--couleur-action); color: white; border: none; border-radius: var(--rayon); padding: var(--espace) calc(var(--espace) * 2); cursor: pointer; text-decoration: none; display: inline-block; }
+.bouton { font: inherit; font-weight: 600; background: var(--couleur-action); color: white; border: none; border-radius: var(--rayon); padding: var(--espace) calc(var(--espace) * 2); cursor: pointer; text-decoration: none; display: inline-block; }
 .bouton:disabled { opacity: 0.5; cursor: not-allowed; }
 
 .grille { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: calc(var(--espace) * 2); }
