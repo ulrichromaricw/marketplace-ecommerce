@@ -4,14 +4,15 @@
 const CATEGORIES = ['Mode', 'Électronique', 'Beauté', 'Maison', 'Alimentation'];
 
 // Copie les fichiers JSON dans localStorage, seulement au tout premier lancement
+// (et de nouveau tant qu'il n'y a aucun produit, pour récupérer les données ajoutées par le Membre 2)
 async function initDonnees() {
-  if (localStorage.getItem('produits')) return; // déjà fait
+  if (lire('produits').length > 0) return; // déjà fait
   for (const nom of ['produits', 'boutiques', 'utilisateurs']) {
-    const reponse = await fetch(`data/${nom}.json`);
+    const reponse = await fetch(`data/${nom}.json`, { cache: 'no-store' }); // toujours la dernière version du fichier
     ecrire(nom, await reponse.json());
   }
-  ecrire('commandes', []);
-  ecrire('panier', []);
+  if (!localStorage.getItem('commandes')) ecrire('commandes', []);
+  if (!localStorage.getItem('panier')) ecrire('panier', []);
 }
 
 // Lit une liste (renvoie une liste vide si elle n'existe pas)
