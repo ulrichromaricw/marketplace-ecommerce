@@ -1,0 +1,58 @@
+<!-- index.html — Responsable : Membre 1 -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accueil — Marketplace</title>
+  <meta name="description" content="Achetez auprès des boutiques locales ou ouvrez la vôtre en quelques minutes.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <header class="en-tete">
+    <a href="index.html" class="logo">Marketplace</a>
+    <button class="menu-burger" aria-label="Ouvrir le menu">☰</button>
+    <nav class="nav-principale">
+      <a href="catalogue.html">Catalogue</a>
+      <a href="boutiques.html">Boutiques</a>
+      <span id="zone-compte"></span>
+      <a href="panier.html">Panier (<span id="compteur-panier">0</span>)</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="banniere">
+      <h1>Achetez local, vendez en ligne</h1>
+      <p>Des vêtements, de l'électronique, des produits de beauté et du terroir, vendus par des boutiques de chez nous. Vous avez quelque chose à vendre ? Ouvrez votre boutique en quelques minutes.</p>
+      <a href="catalogue.html" class="bouton">Voir le catalogue</a>
+      <a href="compte.html" class="bouton bouton-secondaire">Ouvrir ma boutique</a>
+    </section>
+
+    <h2>Catégories</h2>
+    <nav class="categories" aria-label="Catégories">
+      <a href="catalogue.html">Mode</a>
+      <a href="catalogue.html">Électronique</a>
+      <a href="catalogue.html">Beauté</a>
+      <a href="catalogue.html">Maison</a>
+      <a href="catalogue.html">Alimentation</a>
+    </nav>
+
+    <h2>Produits du moment</h2>
+    <div id="produits-vedettes" class="grille"></div>
+
+    <h2>Boutiques à la une</h2>
+    <div id="boutiques-une"></div>
+  </main>
+
+  <footer class="pied-de-page">
+    <p>© 2026 Marketplace — projet scolaire, Institut Saint Jean — <a href="contact.html">Contact</a></p>
+  </footer>
+
+  <script src="js/storage.js"></script>
+  <script src="js/main.js"></script>
+  <script>demarrerPage(afficherAccueil);</script>
+</body>
+</html>
