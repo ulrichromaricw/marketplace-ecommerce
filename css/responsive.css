@@ -1,0 +1,16 @@
+/* responsive.css — Responsable : Membre 1 — en-tête et menu sur mobile */
+.menu-burger { display: none; background: none; border: none; color: white; font-size: 24px; }
+
+@media (max-width: 768px) {
+  .en-tete { flex-wrap: wrap; }
+  .menu-burger { display: block; }
+  .nav-principale { display: none; width: 100%; flex-direction: column; }
+  .nav-principale.ouvert { display: flex; }
+  .nav-principale a { margin: var(--espace) 0; }
+}
+
+@media (max-width: 576px) {
+  main { padding: calc(var(--espace) * 2); }
+  .banniere { padding: calc(var(--espace) * 3) calc(var(--espace) * 2); }
+  .banniere h1 { font-size: 24px; }
+}

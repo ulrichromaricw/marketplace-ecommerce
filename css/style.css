@@ -1,0 +1,63 @@
+/* style.css — Responsable : Membre 1 — variables, base et composants communs */
+:root {
+  --couleur-principale: #1E3A8A;
+  --couleur-action: #F97316;
+  --couleur-fond: #F9FAFB;
+  --couleur-texte: #111827;
+  --couleur-succes: #16A34A;
+  --couleur-erreur: #DC2626;
+  --police-titres: 'Poppins', sans-serif;
+  --police-texte: 'Inter', sans-serif;
+  --rayon: 8px;
+  --espace: 8px;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; font-family: var(--police-texte); color: var(--couleur-texte); background: var(--couleur-fond); }
+h1, h2, h3 { font-family: var(--police-titres); }
+main { max-width: 1200px; margin: 0 auto; padding: calc(var(--espace) * 3); }
+
+.en-tete { display: flex; align-items: center; justify-content: space-between; padding: calc(var(--espace) * 2); background: var(--couleur-principale); }
+.en-tete a { color: white; text-decoration: none; margin-left: calc(var(--espace) * 2); }
+
+.bouton { background: var(--couleur-action); color: white; border: none; border-radius: var(--rayon); padding: var(--espace) calc(var(--espace) * 2); cursor: pointer; text-decoration: none; display: inline-block; }
+.bouton:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.grille { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: calc(var(--espace) * 2); }
+.carte-produit { background: white; border-radius: var(--rayon); padding: calc(var(--espace) * 2); }
+.carte-produit img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: var(--rayon); }
+
+.erreur { color: var(--couleur-erreur); }
+.message-flash { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%); background: var(--couleur-succes); color: white; padding: var(--espace) calc(var(--espace) * 3); border-radius: var(--rayon); }
+
+/* ----- En-tête, navigation et pied de page ----- */
+.logo { font-family: var(--police-titres); font-weight: 700; font-size: 20px; margin-left: 0 !important; }
+.nav-principale { display: flex; align-items: center; flex-wrap: wrap; }
+.nav-principale a:hover { text-decoration: underline; }
+.pied-de-page { text-align: center; padding: calc(var(--espace) * 3); color: #6b7280; font-size: 14px; }
+.pied-de-page a { color: var(--couleur-principale); }
+
+/* ----- Éléments communs ----- */
+a { color: var(--couleur-principale); }
+h1 { font-size: 28px; margin: 0 0 calc(var(--espace) * 2); }
+h2 { font-size: 22px; margin: calc(var(--espace) * 4) 0 calc(var(--espace) * 2); }
+.bouton:hover { filter: brightness(0.95); }
+.bouton-secondaire { background: white; color: var(--couleur-principale); border: 2px solid var(--couleur-principale); }
+.prix { font-weight: 700; color: var(--couleur-texte); }
+.carte-produit h3 { font-size: 16px; margin: var(--espace) 0 4px; }
+.carte-produit h3 a { color: var(--couleur-texte); text-decoration: none; }
+.carte-produit p { margin: 4px 0; }
+.carte-boutique { display: inline-block; background: white; border-radius: var(--rayon); padding: calc(var(--espace) * 2); margin: 0 var(--espace) var(--espace) 0; text-decoration: none; font-weight: 600; }
+
+/* ----- Formulaires ----- */
+form label { display: block; margin-bottom: calc(var(--espace) * 2); font-weight: 600; }
+form input, form select, form textarea { display: block; width: 100%; margin-top: 4px; padding: var(--espace); border: 1px solid #d1d5db; border-radius: var(--rayon); font: inherit; }
+form input:focus, form select:focus, form textarea:focus { outline: 2px solid var(--couleur-principale); border-color: transparent; }
+
+/* ----- Accueil ----- */
+.banniere { background: var(--couleur-principale); color: white; border-radius: var(--rayon); padding: calc(var(--espace) * 5) calc(var(--espace) * 3); }
+.banniere h1 { color: white; font-size: 32px; }
+.banniere p { max-width: 560px; }
+.banniere .bouton { margin: var(--espace) var(--espace) 0 0; }
+.categories { display: flex; flex-wrap: wrap; gap: var(--espace); }
+.categories a { background: white; border-radius: 999px; padding: var(--espace) calc(var(--espace) * 2); text-decoration: none; }
